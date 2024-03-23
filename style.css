@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -14,13 +14,14 @@
     justify-content: center;
     flex-direction: column;
     color: white;
+    padding: 20px; /* Add padding for smaller screens */
 }
 
 .hero h1 {
     font-size: 45px;
     font-weight: 500;
-    margin-top: -50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
+    text-align: center; /* Center align for smaller screens */
 }
 
 .hero h1 span {
@@ -28,32 +29,36 @@
 }
 
 textarea {
-    width: 600px;
-    height: 250px;
+    width: 100%; /* Make textarea width 100% for responsiveness */
+    max-width: 600px; /* Set max-width for larger screens */
+    height: 200px; /* Adjust height for smaller screens */
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     font-size: 15px;
     border: 0;
     outline: 0;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     resize: none;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Adjust margin for smaller screens */
 }
 
 textarea::placeholder {
-    font-size: 16px;
+    font-size: 14px; /* Adjust placeholder font size */
     color: #ddd;
 }
 
 .row {
-    width: 600px;
+    width: 100%; /* Make row width 100% for responsiveness */
+    max-width: 600px; /* Set max-width for larger screens */
     display: flex;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    justify-content: space-between; /* Add space between items for smaller screens */
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-#b1{
+#b1 {
     background: #008682;
     color: #fff;
     font-size: 16px;
@@ -74,7 +79,6 @@ textarea::placeholder {
 #b1 img {
     width: 25px;
     margin-right: 10px;
-    margin-left: -5px;
 }
 
 select {
@@ -82,7 +86,7 @@ select {
     color: #fff;
     background: rgba(255, 255, 255, 0.151);
     height: 50px;
-    width: 80px;
+    width: 150px; /* Adjust width for smaller screens */
     padding: 0 20px;
     outline: 0;
     border: 0;
@@ -95,6 +99,10 @@ select {
     background-position-y: 19px;
 }
 
+select option {
+    color: #000;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -104,4 +112,23 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px; /* Decrease font size for smaller screens */
+    }
+
+    textarea {
+        height: 150px; /* Decrease height for smaller screens */
+    }
+
+    .row {
+        max-width: 100%;
+    }
+
+    select {
+        width: 100%; /* Make select width 100% for smaller screens */
+        max-width: none; /* Remove max-width for smaller screens */
+    }
 }
